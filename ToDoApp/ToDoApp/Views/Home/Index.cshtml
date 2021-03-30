@@ -1,0 +1,99 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+
+
+<style>
+	input[type='submit'], button, [aria-label] {
+		cursor: pointer;
+	}
+
+
+
+	#editForm {
+		display: none;
+	}
+
+
+
+	table {
+		font-family: Arial, sans-serif;
+		border: 1px solid;
+		border-collapse: collapse;
+	}
+
+
+
+	th {
+		background-color: #f8f8f8;
+		padding: 5px;
+	}
+
+
+
+	td {
+		border: 1px solid;
+		padding: 5px;
+	}
+</style>
+<h1>ToDo</h1>
+<h4>Add</h4>
+<form action="javascript:void(0);" method="POST" onsubmit="addToDo()">
+	<div class="form-group">
+		@*<input type="text" id="Id" placeholder="Id">*@
+		<input type="text" id="Description" placeholder="Description">
+		<input type="text" id="IsDone" placeholder="IsDone">
+		<input type="submit" value="Add">
+	</div>
+</form>
+
+
+
+
+<div id="editForm">
+	<h4>Edit</h4>
+	<form action="javascript:void(0);" onsubmit="updateItem()">
+		<input type="hidden" id="Id">
+		<input type="text" id="editDescription" placeholder="Description">
+		<input type="text" id="editIsDone" placeholder="IsDone">
+		<input type="submit" value="Save">
+		<a onclick="closeInput()" aria-label="Close">&#10006;</a>
+	</form>
+</div>
+<div>
+	<p id="counter"></p>
+</div>
+<div>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Description</th>
+				<th>Is Done</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody id="todolist"></tbody>
+	</table>
+</div>
+
+
+
+<script src="js/site.js" asp-append-version="true"></script>
+
+
+
+
+<div>
+	<script type="text/javascript">
+
+
+
+		getToDos();
+
+
+
+	</script>
+</div>
