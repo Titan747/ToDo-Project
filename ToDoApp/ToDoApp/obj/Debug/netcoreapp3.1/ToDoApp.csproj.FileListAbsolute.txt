@@ -35,3 +35,7 @@ C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\ToDoApp.dll
 C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\ToDoApp.pdb
 C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\ToDoApp.genruntimeconfig.cache
 C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\ToDoApp.csproj.CopyComplete
+C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Index.cshtml.g.cs
+C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Add.cshtml.g.cs
+C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Delete.cshtml.g.cs
+C:\Users\Titan\source\repos\ToDoApp\ToDoApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Update.cshtml.g.cs

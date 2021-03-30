@@ -11,14 +11,14 @@
 
 
 
-const uri = 'https://localhost:59451/api/todo';
+const uri = 'http://localhost:59451/api/todo';
 let todolist = [];
 
 
 
 
 
-function getToDo() {
+function getToDos() {
     fetch(uri, {
         method: 'GET',
         mode: 'cors',
@@ -36,10 +36,10 @@ function getToDo() {
 
 
 function addToDo() {
-    debugger;
+  
     const ToDo = {
-        todoDescription: document.getElementById('todoDescription').value,
-        todoIsDone: document.getElementById('todoIsDone').value
+        Description: document.getElementById('Description').value,
+        IsDone: document.getElementById('IsDone').value
     };
     //Fetch API
     //axios
@@ -76,14 +76,15 @@ function deleteItem(id) {
 
 
 function displayEditForm(id) {
-    debugger;
+  
     const item = todolist.find(item => item.Id === id);
 
 
 
     document.getElementById('editId').value = item.Id;
-    document.getElementById('editDescription').value = item.todoDescription;
-    document.getElementById('editIsDone').value = item.todoIsDone;
+    document.getElementById('editDescription').value = item.Description;
+    document.getElementById('editIsDone').value = item.IsDone;
+    document.getElementById('editForm').style.display = 'block';
 }
 
 
@@ -92,7 +93,7 @@ function updateItem() {
     const Id = document.getElementById('editId').value;
     const ToDo = {
         Id: document.getElementById('editId').value,
-        Description: parseInt(document.getElementById('editDescription').value),
+        Description: document.getElementById('editDescription').value,
         IsDone: document.getElementById('editIsDone').value
     };
 
@@ -106,7 +107,7 @@ function updateItem() {
             'Content-Type': 'application/json; charset=utf-8',
             'Access-Control-Allow-Origin': '*'
         },
-        body: JSON.stringify(Equipment)
+        body: JSON.stringify(ToDo)
     })
         .then(() => getToDos())
         .catch(error => console.error('Unable to update item.', error));
@@ -138,8 +139,8 @@ function _displayCount(itemCount) {
 
 
 
-function _displayequipmentList(data) {
-    debugger;
+function _displaytodoList(data) {
+ 
     const tBody = document.getElementById('todolist');
     tBody.innerHTML = '';
 
@@ -201,12 +202,12 @@ function _displayequipmentList(data) {
 
 
 
-        let td5 = tr.insertCell(4);
+        let td5 = tr.insertCell(3);
         td5.appendChild(editButton);
 
 
 
-        let td6 = tr.insertCell(5);
+        let td6 = tr.insertCell(4);
         td6.appendChild(deleteButton);
     });
 
