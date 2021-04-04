@@ -42,8 +42,8 @@
 <form action="javascript:void(0);" method="POST" onsubmit="addToDo()">
 	<div class="form-group">
 		@*<input type="text" id="Id" placeholder="Id">*@
-		<input type="text" id="Description" placeholder="Description">
-		<input type="text" id="IsDone" placeholder="Is Done">
+		<input type="text" id="description" placeholder="Description">
+		<input type="text" id="isDone" placeholder="Is Done">
 		<input type="submit" value="Add">
 	</div>
 </form>
@@ -54,9 +54,9 @@
 <div id="editForm">
 	<h4>Edit</h4>
 	<form action="javascript:void(0);" onsubmit="updateItem()">
-		<input type="hidden" id="Id">
-		<input type="text" id="editDescription" placeholder="Description">
-		<input type="text" id="editIsDone" placeholder="Is Done">
+		<input type="hidden" id="id">
+		<input type="text" id="editdescription" placeholder="Description">
+		<input type="text" id="editisDone" placeholder="Is Done">
 		<input type="submit" value="Save">
 		<a onclick="closeInput()" aria-label="Close">&#10006;</a>
 	</form>
